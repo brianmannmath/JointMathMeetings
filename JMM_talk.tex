@@ -128,7 +128,8 @@
    \tableofcontents[currentsection]
 \end{frame}}
 
-\title{Hyperbolic $Out(F_N)$-graphs}
+\title{The Cyclic Splitting Graph}
+\subtitle{and other $Out(F_N)$-graphs}
 \author{Brian Mann}
 \institute{University of Utah}
 \date{January 16, 2014}
@@ -143,17 +144,17 @@
 
 \section{Preliminaries}
 
+\begin{frame}
+You can get all these slides on \url{http://www.github.com/brianmannmath/JointMathMeetings}
+\end{frame}
 
 
 \begin{frame}
 \frametitle{Hyperbolic metric spaces}
-
 \begin{goal}
 Study $Out(F_N)$ via its action on hyperbolic graphs.
 \end{goal}
-
 \pause
-
 \begin{defin}
 Let $\delta > 0$. A geodesic metric space $X$ is \emph{$\delta$-hyperbolic} if for any geodesic triangle with vertices $a,b,c$, the geodesic segment $ab$ is contained in a $\delta$-neighborhood of the union of $bc$ and $ac$.
 
@@ -172,7 +173,6 @@ Let $X$ be a hyperbolic metric space.
 \begin{defin}
 An isometry $g$ of $X$ is called a \emph{hyperbolic isometry} or just \emph{hyperbolic} if it has an invariant bi-infinite quasi-geodesic $\gamma$ in $X$. We will call $\gamma$ a \emph{quasi-axis} for $g$.
 \end{defin}
-\pause
 \end{frame}
 
 \section{Weak Proper Discontinuity}
@@ -181,14 +181,14 @@ An isometry $g$ of $X$ is called a \emph{hyperbolic isometry} or just \emph{hype
 Let $G$ be a finitely presented group and $X$ a hyperbolic metric space.
 \pause
 \begin{defin}
-An action of $G$ on $X$ satisfies \emph{Weak Proper Discontinuity (WPD)} if:
+An action of $G$ on $X$ by isometries satisfies \emph{Weak Proper Discontinuity (WPD)} if:
 \pause
 \begin{itemize}
 \item $G$ is not virtually cyclic.
 \pause
 \item $G$ contains at least one hyperbolic isometry.
 \pause
-\item for each hyperbolic isometry $g \in G$, $x \in X$, and $C >0$ there exists an $N > 0$ such that $$\{  \in G | d(x,h(x)) \leq C, d(g^N(x), hg^N(x)) \leq C \}$$ is finite.
+\item for each hyperbolic isometry $g \in G$, $x \in X$, and $C >0$ there exists an $N > 0$ such that $$\{ h  \in G | d(x,h(x)) \leq C, d(g^N(x), hg^N(x)) \leq C \}$$ is finite.
 \end{itemize}
 \end{defin}
 \pause
@@ -206,9 +206,13 @@ Some examples:
 \item The action of $MCG(S)$ on $\mathcal{C}(S)$. (Bestvina-Fujiwara \cite{BF02})
 \pause
 \item A hyperbolic group $G$ acting on its Cayley graph.
+\pause
+\item The action of a relatively hyperbolic group on its relative Cayley graph.
+\pause
+\item Michael Hull will talk about more examples later!
 \end{itemize}
 \pause
-\begin{thm}[Sisto \cite{Sisto13}]
+\begin{thm}[Sisto 2013 \cite{Sisto13}]
 Hyperbolic isometries are generic in $G$ (in some sense involving a random walk on the Cayley graph).
 \end{thm}
 \end{frame}
@@ -216,12 +220,12 @@ Hyperbolic isometries are generic in $G$ (in some sense involving a random walk 
 \section{Hyperbolic $Out(F_N)$-graphs}
 
 \begin{frame}
-\frametitle{The free splitting graph}
+\frametitle{The Free Splitting Graph}
 \begin{defin}
 The \emph{free splitting graph} $FS_N$ has vertex set $=$ one edge graph of groups decompositions of $F_N$ with trivial edge group (up to some equivalence). Two vertices are connected by an edge if there is a two-edge graph of groups decomposition collapsing to both.
 \end{defin}
 \pause
-\begin{thm}[Handel-Mosher \cite{HandelMosher}]
+\begin{thm}[Handel-Mosher 2012 \cite{HandelMosher}]
 $FS_N$ is hyperbolic.
 \end{thm}
 \end{frame}
@@ -257,9 +261,9 @@ Note that the automorphisms above where WPD fails for $FS_N$ fix a cyclic splitt
 \end{frame}
 
 \begin{frame}
-\frametitle{The free factor graph}
+\frametitle{The Free Factor Graph}
 \begin{defin}
-The \emph{free factor graph} $FF_N$ has vertex set $=$ one-edge graph of groups decompositions of $F_N$ with trivial edge group. Two vertices are connected by an edge if there exists a proper free factor which (up to conjugacy) contained in vertex groups of both decompositions.
+The \emph{free factor graph} $FF_N$ has vertex set $=$ one-edge graph of groups decompositions of $F_N$ with trivial edge group. Two vertices are connected by an edge if there exists a proper free factor which is (up to conjugacy) contained in vertex groups of both decompositions.
 \end{defin}
 \pause
 \begin{thm}[Bestvina-Feighn \cite{BF09}, \cite{BF11}]
@@ -273,10 +277,14 @@ $FF_N$ is hyperbolic and the action of $Out(F_N)$ is WPD.
 The \emph{intersection graph} $I_N$ has vertex set $=$ one-edge graph of groups decompositions of $F_N$ with cyclic edge group. Two vertices are connected by an edge if the corresponding Bass-Serre trees share a common elliptic conjugacy class (which might not be contained in a free factor! $[a,b] \in F_2$). 
 \end{defin}
 \pause
+Surface automorphisms have a bounded orbit in $I_N$ (any two trees dual to curves or arcs on the surface are adjacent). 
+\pause
 \begin{thm}[- 2013]
 $I_N$ is hyperbolic and the action of $Out(F_N)$ is WPD. The hyperbolic isometries are fully irreducible automorphisms which have no periodic conjugacy classes.
 \end{thm}
-\pause
+\end{frame}
+\begin{frame}
+
 \begin{cor}
 Fully irreducible automorphisms with no periodic conjugacy classes are generic in $Out(F_N)$.
 \end{cor}
